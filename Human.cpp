@@ -15,7 +15,7 @@ Human::Human(string name)
 char Human::makeMove()
 {
     char move;
-    std::cout<<"Enter move: "<< std::endl;
+    std::cout<<"Enter move: ";
     std::cin>>move;
     return move;
 
