@@ -9,7 +9,7 @@ Human::Human()
 
 Human::Human(string name)
 {
-    this->name = name;
+    this->name = "Human";
 }
 
 char Human::makeMove()
