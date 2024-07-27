@@ -2,6 +2,8 @@
 using namespace std;
 #include <iostream>
 
+Human::Human(){}
+
 
 
 Human::Human(string name)
