@@ -7,5 +7,5 @@ char Computer::makeMove()
 
 std::string Computer::getName()
 {
-    return name;
+    return "Computer";
 }

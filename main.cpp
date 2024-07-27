@@ -1,6 +1,5 @@
 #include<iostream>
 #include "Computer.h"
-#include "Player.h"
 #include "Human.h"
 #include "Referee.h"
 
@@ -16,6 +15,7 @@ int main(){
         } else {
             std::cout << "You lose" << std::endl;
         }
+        return 0;
 }
 
 

@@ -7,5 +7,6 @@ using namespace std;
     public:
     virtual char makeMove() = 0;
     virtual string getName() = 0;
+    virtual ~Player() = 0;
  };
  #endif
