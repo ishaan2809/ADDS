@@ -2,15 +2,13 @@
 using namespace std;
 #include <iostream>
 
-Human::Human(){
-    this->name = "Human";
-}
 
 
 
-Human::Human(string name)
+
+Human::Human(string name) : name(name)
 {
-    this->name = name;
+    
 }
 
 char Human::makeMove()
