@@ -2,7 +2,9 @@
 using namespace std;
 #include <iostream>
 
-Human::Human(){}
+Human::Human(){
+    this->name = "Human";
+}
 
 
 
