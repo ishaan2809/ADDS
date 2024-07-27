@@ -1,14 +1,11 @@
 #include "Referee.h"
 
-Referee::Referee()
-{
-}
+Referee::Referee() {}
 
-Player* Referee::refGame(Player* player1, Player* player2)
-{
+Player* Referee::refGame(Player* player1, Player* player2) {
     char move1 = player1->makeMove();
     char move2 = player2->makeMove();
-    
+
     if (move1 == move2) {
         return nullptr;
     } else {
@@ -34,6 +31,6 @@ Player* Referee::refGame(Player* player1, Player* player2)
         }
     }
     
+   
     return nullptr;
 }
-
