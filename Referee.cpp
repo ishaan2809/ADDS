@@ -8,29 +8,25 @@ Player* Referee::refGame(Player* player1, Player* player2) {
 
     if (move1 == move2) {
         return nullptr;
-    } else {
-        switch (move1) {
-            case 'R':
-                switch (move2) {
-                    case 'P': return player2;
-                    case 'S': return player1;
-                }
-                break;
-            case 'P':
-                switch (move2) {
-                    case 'R': return player1;
-                    case 'S': return player2;
-                }
-                break;
-            case 'S':
-                switch (move2) {
-                    case 'R': return player2;
-                    case 'P': return player1;
-                }
-                break;
+    } else if (move1 == 'R') {
+        if (move2 == 'P') {
+            return player2;
+        } else if (move2 == 'S') {
+            return player1;
+        }
+    } else if (move1 == 'P') {
+        if (move2 == 'R') {
+            return player1;
+        } else if (move2 == 'S') {
+            return player2;
+        }
+    } else if (move1 == 'S') {
+        if (move2 == 'R') {
+            return player2;
+        } else if (move2 == 'P') {
+            return player1;
         }
     }
-    
-   
+
     return nullptr;
 }
