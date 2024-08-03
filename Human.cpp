@@ -49,7 +49,7 @@ Human::Human(std::string name) : name(name)
         return new Zombie();
     } else {
         std::cout << "Invalid move" << std::endl;
-        return new Rock();
+        return nullptr;
     }
 
 
