@@ -3,12 +3,13 @@
 #include "Player.h"
 #include <string>
 class Computer : public Player{
-    // private:
-    // std::string name;
+    private:
+    std::string name;
     
     public:
-    char makeMove();
-    std::string getName();
+    Computer();
+    Move* makeMove(); 
+    std::string getName(); 
 
 
 };
