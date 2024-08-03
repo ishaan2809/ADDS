@@ -48,7 +48,6 @@ Human::Human(std::string name) : name(name)
     } else if (moveName == "Zombie") {
         return new Zombie();
     } else {
-        std::cout << "Invalid move" << std::endl;
         return nullptr;
     }
 
