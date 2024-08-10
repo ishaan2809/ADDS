@@ -12,3 +12,5 @@ class Truckloads{
     return numTrucks(half1,loadSize) + numTrucks(half2,loadSize);
     }
 };
+
+
