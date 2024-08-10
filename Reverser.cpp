@@ -14,7 +14,7 @@
 
         int reversedRemainingDigits = reverseDigit(remainingDigits);
         return lastDigit *pow(10, power) + reversedRemainingDigits ;
-        power++;
+        
     }
 
     
@@ -32,4 +32,5 @@
     }
 
     
+
 
