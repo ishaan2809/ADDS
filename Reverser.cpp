@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Reverser.h"    
+#include "Reverser.h"
+#include <cmath> 
     int Reverser::reverseDigit(int value) {
      
         if (value < 10) {
@@ -9,13 +10,19 @@
         
         int lastDigit = value % 10;
         int remainingDigits = value / 10;
+        int power = log10(value);
 
-        
-        return lastDigit + reverseDigit(remainingDigits) * 10;
+        int reversedRemainingDigits = reverseDigit(remainingDigits);
+        return lastDigit *pow(10, power) + reversedRemainingDigits ;
+        power++;
     }
 
     
     std::string Reverser::reverseString(std::string characters) {
+
+         if (characters.empty()){
+        return "ERROR";
+         }
         
         if (characters.length() <= 1) {
             return characters;
@@ -23,4 +30,17 @@
         
         return reverseString(characters.substr(1)) + characters[0];
     }
+
+    int main() {
+    Reverser r;
+    // Test reverseDigit
+    int reversedNumber = r.reverseDigit(12345);
+    std::cout << "Reversed Number: "  << reversedNumber << std::endl;  // Should print "54321"
+
+    // Test reverseString
+    std::string reversedString = r.reverseString("");
+    std::cout << "Reversed String: " << reversedString << std::endl;  // Should print "olleh"
+
+    return 0;
+}
 
