@@ -1,9 +1,6 @@
 #include <iostream>
-
-
-class Truckloads{
-    public:
-    int numTrucks(int numCrates, int loadSize){
+#include "Truckloads.h"
+    int Truckloads::numTrucks(int numCrates, int loadSize){
         if(numCrates <= loadSize){
             return 1;
         }
@@ -11,6 +8,4 @@ class Truckloads{
     int half2 = numCrates - half1;
     return numTrucks(half1,loadSize) + numTrucks(half2,loadSize);
     }
-};
-
 

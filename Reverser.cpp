@@ -1,10 +1,7 @@
 #include <iostream>
 #include <string>
-
-class Reverser {
-public:
-    
-    int reverseDigit(int value) {
+#include "Reverser.h"    
+    int Reverser::reverseDigit(int value) {
      
         if (value < 10) {
             return value;
@@ -18,7 +15,7 @@ public:
     }
 
     
-    std::string reverseString(std::string characters) {
+    std::string Reverser::reverseString(std::string characters) {
         
         if (characters.length() <= 1) {
             return characters;
@@ -26,8 +23,4 @@ public:
         
         return reverseString(characters.substr(1)) + characters[0];
     }
-};
-
-
-
 
