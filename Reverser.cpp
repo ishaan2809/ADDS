@@ -10,11 +10,10 @@
         
         int lastDigit = value % 10;
         int remainingDigits = value / 10;
-        int power = log10(remainingDigits) + 1;
+        int power = log10(value);
 
         int reversedRemainingDigits = reverseDigit(remainingDigits);
         return lastDigit *pow(10, power) + reversedRemainingDigits ;
-        
     }
 
     
@@ -31,4 +30,4 @@
         return reverseString(characters.substr(1)) + characters[0];
     }
 
-
+    
